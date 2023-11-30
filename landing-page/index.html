@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+       
+       .carousel-inner img{
+        height: 690px;
+        width:fit-content;
+        object-fit: cover;
+        /* z-index: -20; */
+        
+        
+       }
+       p, span,div{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+       }
+       #carouselExampleCaptions{
+        width:100%;
+        position: absolute;
+        display: block;
+        top:0px;
+        /* z-index: -20; */
+
+       }
+       /* #carouselExampleCaptions button,div,span{
+        z-index: 10;
+       } */
+       .container-fluid{
+        background-color: transparent; z-index: 50;
+
+       }
+       nav{
+        background-color: transparent;
+        z-index: 50;
+        /* position: relative; */
+       }
+       #foot{
+        display: block;
+        /* margin-top: 680px; */
+        background-color: black;
+        color: white;
+        margin:0px;
+        padding:0px;
+        position: relative;
+        top:4rem;
+       }
+       
+       .contact{
+        
+        display: flex;
+        justify-content: space-around;
+        /* justify-items: stretch; */
+       }
+       #contact-container{
+           margin:0px;
+        
+       }
+       h1{
+        text-align: center;
+        /* margin-bottom: 30px; */
+       }
+       .contact span{
+        width:20%;
+       }
+       .contact img{
+        /* width:15rem; */
+        height: 25vw;
+        border-radius: 50%;
+       }
+       @media screen and (max-width: 840px) {
+        .contact{
+            align-items: center;
+            flex-direction: column;
+        }
+        .contact span{
+        display: block;
+        /* background-color: red; */
+       }
+       }
+       form{
+        width:60%;
+       }
+       #about-container{
+        margin-top: 700px;
+        margin-left:5rem;
+        margin-right:5rem;
+
+       }
+       footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer img {
+            width: 2rem; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+            border-radius: 50%;
+            position: relative;
+            top:1px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #foot-logo{
+          width: 5rem;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <nav class="navbar  navbar-expand-lg navbar-dark" id ="navb">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#carouselExampleCaptions">DIML</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#carouselExampleCaptions">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-container">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-container">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- home section -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="dimg3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Welcome to DIML</h5>
+              <p>Dance is my life </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="dimg4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- <h5>Second slide label</h5> -->
+              <p>"Feel the rhythm, embrace the beat, dance to your own heartbeat."</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="dimg1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- <h5>Third slide label</h5> -->
+              <p>"Unleash the Dancer Within."</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+<!-- About -->
+      <div id="about-container">
+        <h1>
+            About us
+        </h1>
+        <div class="about">
+            <h2>Welcome to DIML, where the art of dance comes to life, and every step tells a story!</h2>
+            <p>
+                we conduct 
+            </p>
+            <h2>Who we are</h2>
+            <p>
+                At DIML, we are passionate about fostering creativity, expression, and a love for dance. Established with the vision of creating a vibrant and inclusive community of dancers, we believe that dance is not just a series of movements but a powerful form of self-expression
+            </p>
+            <h2>
+                Our Mission
+            </h2>
+            <p>
+                Our mission is to provide a nurturing and inspiring environment where individuals of all ages and skill levels can discover the joy of dance. We strive to cultivate not only technical proficiency but also a deep appreciation for the artistry and cultural richness that dance embodies.
+            </p>
+            <h2>
+                What Sets Us Apart:
+            </h2>
+            <p>
+                Professional Instructors: Our team comprises experienced and dedicated dance instructors who are committed to helping students reach their full potential.
+
+Diverse Dance Styles: From classical ballet to contemporary, hip-hop to ballroom, we offer a diverse range of dance styles to cater to varying interests and preferences.
+
+Inclusive Community: At [Your Dance Studio Name], we celebrate diversity and inclusivity. Our dance community is welcoming to everyone, irrespective of age, background, or experience level.
+            </p>
+            <h2>Our classes</h2>
+            <p>
+                Whether you are a beginner taking your first steps or an experienced dancer looking to refine your technique, our classes are designed to inspire and challenge you. We offer classes for children, teens, and adults, ensuring that there is a place for everyone in our dance family.
+            </p>
+            <h2>
+                Join Us:
+            </h2>
+            <p>
+                Embark on a journey of self-discovery, rhythm, and expression with DIML. Come, dance with us, and be a part of a community that shares your passion for movement and artistic exploration.
+
+At DIML, the dance floor is not just a space; it's a canvas, and you are the artist. Let's dance together!
+            </p>
+        </div>
+      </div>
+      <!-- contact -->
+      <div id="contact-container">
+        <h1>Contact us</h1>
+      
+      <div class="contact">
+        
+        <span><img src = "dimg2.jpg"/></span>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="exampleInputfname">
+              </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="exampleInputlname">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check to recieve updates</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+    </div>
+      <!-- <div class="card mb-3 "  id="foot">
+        <div class="row g-0">
+          <div class="col-md-4" id = "foot-id">
+            <img src="dimg2.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Thanks for visiting</h5>
+              <p class="card-text">Copyright@ DIML</p>
+              
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- foot -->
+
+      <div id="foot">
+        <footer>
+            <img id="foot-logo" src="dimg2.jpg" alt="Company Logo" >
+            <p>Follow Us On:</p>
+            <ul class="social-icons">
+              <li><img src="instagram.png"/><a href="#" target="_blank">Instagram</a></li>
+                <li><img src="linkedin.png"/><a href="#" target="_blank">Facebook</a></li>
+                <li><img src="github.png"/><a href="#" target="_blank">Twitter</a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+        </footer>
+      </div>
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
